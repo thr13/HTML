@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <style type="text/css">
+            #item1 { /* %는 전체 body의 %기준 */
+                width: 100px;
+                height: 100px;
+                background-color: red; /*배경색 지정 r,g,b를 0부터 255까지 가능 rgb(255,0,0)  또는 16진수 #ff0000 도 표현가능*/
+                color: white; /*텍스트 색깔 결정*/
+            }
+            #item2 {
+                width: 100px;
+                height: 100px;
+                color: blue;
+                font-size: 32px; /*텍스트 크기*/
+                font-weight: 900; /*텍스트 굵기 수치 또는 bold예약어 사용가능 */
+            }
+            #item-list {
+                height: 200px;
+                background-color: gray;
+                padding: 16px; /*padding은 태그를 기준으로 내부 여백*/
+            }
+            #item-list > #item3 { /*복합선택자~ 상위 선택자 지정*/
+                margin-left: 16px;
+                margin-bottom: 32px;
+                margin: 32px; /*margin는 태그를 기준으로 외부 여백*/
+                background-color: yellow;
+            }
+            #item-list > #item4 {
+                margin-left: 16px;
+                background-color: green;
+                border: 5px dashed blue; /*border는 테두리 그 선 자체를 의미함, border는 너비 스타일 색상; 순으로 입력한다 */
+            }
+        </style>
+    </head>
+    <body>
+        <div id="item1">1번 아이템</div>
+        <div id="item2">2번 아이템</div>
+        <div id="item-list">
+            <div id="item3">3번 아이템</div>
+            <div id="item4">4번 아이템</div>
+        </div>
+    </body>
+</html>

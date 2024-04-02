@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <!-- -->
+        <style type="text/css">
+            /* 하위 선택자 */
+            #item-list p { /*item-list 안에 있는 모든 태그에 p 선택자 효과 적용*/
+                color: red;
+            }
+            /* 자식 선택자 */
+            #item-list > p { /* item-list태그의 첫번째 자식 태그에 p 선택자 효과 적용, 단 중복으로 씌워진 선택자는 최종적으로 밑에 있는 선택자로 덮어씌워짐 */
+                color: blue;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div id="item-list">
+            <p>첫번쨰 자식 아이템1</p>
+            <p>첫번쨰 자식 아이템2</p>
+            <div>
+                <p>두번째 자식 아이템1</p>
+                <p>두번째 자식 아이템2</p>
+            </div>
+        </div>
+    </body>
+</html>

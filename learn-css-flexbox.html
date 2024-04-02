@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <style>
+            .parent {
+                display: flex; /* display속성은 배치, flex는 배치가 수평적으로 바꿈*/
+                background-color: aqua; 
+                
+                /*
+                flex-direction: row; 정렬방향인 flex를 수직 배치로 되돌림, 만약 수평적 배치를 원한다면 row를 사용하면됨(기본값)
+                justify-content: center; /*아이템 정렬 방향(flex-direction과 같은방향이고 여백을 기준으로 아이템을 배치함
+                align-tiems는 flex-direction과 수직방향으로 아이템을 여백기준 배치 이다
+                align-items: center;
+                height: 200px; */
+            }
+            .child {
+                width: 100px;
+                height: 100px;
+                background-color: blue;
+                margin-right: 8px;
+                border: 1px solid black;
+                /*CSS에서는 flex: 증가너비 감소너비 기본너비; 라고 할때 flex-grow flex-shrink flex-basis; 이렇게 표현할 수 있음*/
+            }
+
+            #child1{
+                flex-basis: 300px;
+                flex-grow: 1; /*LOW방향에서 여백이 있을때, 이 여백을 기준으로 어떻게 차지할 것인지 결정, 상대적인 크기 라고 생각하면됨 */
+                flex-shrink: 2; /*크기가 줄어들때, 어느 비중으로 줄어드는지 결정, 상대적인 크기이다 */
+            }
+            #child2{
+                flex-basis: 300px;
+                flex-grow: 1;
+                flex-shrink: 2;
+            }
+            #child3{
+                flex-basis: 300px;
+                flex-grow: 1;
+                flex-shrink: 2;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="parent">
+            <div id="child1" class="child">자식</div>
+            <div id="child2" class="child">자식</div>
+            <div id="child3" class="child">자식</div>
+        </div>
+    </body>
+</html>
