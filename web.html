@@ -13,9 +13,24 @@
         <p>안녕하세요 그래비 입니다. </p>
         <p>안녕하세요 그래비 입니다. </p>
         <p>안녕하세요 그래비 입니다. </p>
-        <br/> <!-- br태그는 밑줄 띄워쓰기(\n역할) -->
+        <br/> <!-- br태그는 줄바꿈 역할 -->
         <p>안녕하세요 그래비 입니다. </p>
-        <a href="https://www.naver.com">네이버 넘어가기 </a> <!-- a태그는 필수 속성으로 href라는 속성이 필요함-->
+        <a href="https://www.naver.com">네이버 넘어가기 </a> <!-- a태그는 필수 속성으로 href라는 속성이 필요함, a태그는 줄바꿈이 되지 않음-->
         <img src="https://cdn.pixabay.com/photo/2015/03/26/09/47/sky-690293___340.jpg"/>
+        <alt="구름사진" /> <!-- alt태그는 그림파일 제목 -->
+        <!-- form 태그는 사용자 입력데이터 관리-->
+        <form>
+            <label>아이디 입력 </label> <!--label태그는 인풋에 제목을 씌워주는 역할-->
+            <input type="text"/> <!--input태그는 타입명시를 필요로한다-->
+            <br/>
+            <label>비밀번호 입력 </label>
+            <input type="password" /> <!--패스워드 타입은 비밀번호창을 가리는 효과가 있음-->
+            <input type="submit" value="전송"/> <!--submit태그는 value를 서버로 보내는 기능을 가짐, value에 메시지박스내용을 대입할수있음-->
+        </form>
+        <div> <!--div태그는 영역을 나누는 역할을 가짐-->
+            <h1>구름 사진입니다.</h1>
+            <img src="https://cdn.pixabay.com/photo/2015/03/26/09/47/sky-690293___340.jpg"/>
+        <alt="구름사진" />
+        </div>
     </body>
 </html>
