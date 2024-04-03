@@ -1,0 +1,37 @@
+<Javascript 기본1>
+ 코드를 마무리한다는 의미로 맨 마지막에 ;(세미콜론)을 붙여준다. 하지만 안붙여도 문제가 없음
+ 
+변수>
+ 데이터를 담는 공간, 이 데이터들을 바탕으로 HTML, CSS를 이용해 화면을 보여줌
+ 변수 선언은 var, let, const 사용함
+
+ 변수를 정의 한다는 것 >> 선언된 변수에 값을 넣는 작업을 의미함
+ 예) var name; // 변수name선언 
+     name="그랩" // name이라고 선언된 변수에 "그랩" 이라는 값을 저장함(문자열)
+
+ var 키워드 >> 같은 이름의 변수를 다시 사용할 수 있음(요즘은 잘 사용하지않음)
+ 예) var num1=20;
+     var num1='Bob';
+ let 키워드 >> 한번 선언된 변수에 다시 새롭게 선언할 수 없음(값 추가하는 것은 에러가 발생하지 않음) 
+ 예) let num2=20;
+     num2="hello";
+     let num2='Bob'; // <- 에러 (선언된 변수를 다시 let으로 선언했기 때문에 오류가 난다)
+ const 키워드 >> 상수화, 선언된 변수에 새로운 값을 정의 할 수 없음(변수 값을 더이상 변경하지 않을때 사용)
+ 예) const num3=30;
+     num3='Bob'; // <- 에러!
+
+변수명 규칙>
+ 변수명은 영문 또는 숫자로 지을수있으나 첫번째글자로 숫자를 넣을 순 없다. 추가로 변수명은 띄어쓰기와 특수문자는 불가능하다(몇몇개는 예외)
+  snake case 예) let first_name='bob'
+  camel case 예) let firstName='bob'
+
+ ※ 크롬 개발자 도구는 F12, 새로고침 ctrl+r, 줄바꿈 shift+enter
+
+자료형>
+ 자료형은 데이터형식을 의미함. string(문자), number(숫자), boolean(참/거짓 여부), null(값이 존재하지않음), undefined(변수를 선언하고 정의하지 않은 상태일 때 들어가는 자료형)
+ 예) var name; //undefined
+     name="그랩"; //string(문자)
+     var age=27; //number(숫자)
+     var isFool=false; //boolean(true,false)
+     var nully=null; //null(값존재x)
+ 자료형을 확인하는 방법 >> typeof 키워드 사용 >> 예)typeof name 입력시 "string" 반환
