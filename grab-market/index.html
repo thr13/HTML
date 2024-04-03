@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title>그랩마켓</title>
+        <link href="index.css" type="text/css" rel="stylesheet" />
+    </head>
+    <body><!--각 div태그는 수직 순서대로 나열됨-->
+        <div id="header">
+            <div id="header-area">
+                <img src="images/icons/logo.png" />
+            </div>
+        </div> 
+        <div id="body">
+            <div id="banner">
+                <img src="images/banners/banner1.png"/>
+            </div>
+            <h1>판매되는 상품들</h1> <!--body태그의 첫번째 자식 h1태그-->
+            <div id="product-list">
+                <div class="product-card">
+                    <div>
+                        <img class="product-img" src="images/products/basketball1.jpeg" />
+                    </div>
+                    <div class="product-contents"> <!--span태그 텍스트 스타일 매겨줄때 사용-->
+                        <span class="product-name">농구공 1호</span> <!--span태그는 div태그와 비슷하게 영역을 나눌때 사용되며, 줄바꿈이 되지않음-->
+                        <span class="product-price">50000원</span>
+                        <div class="product-seller"> <!--일반적으로 레이아웃을 나눌땐, div태그사용-->
+                            <img class="product-avatar" src="images/icons/avatar.png"/>
+                            <span>그랩</span>
+                        </div> 
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div>
+                        <img class="product-img" src="images/products/keyboard1.jpg" />
+                    </div>
+                    <div class="product-contents"> <!--span태그 텍스트 스타일 매겨줄때 사용-->
+                        <span class="product-name">키보드 1호</span> <!--span태그는 div태그와 비슷하게 영역을 나눌때 사용되며, 줄바꿈이 되지않음-->
+                        <span class="product-price">30000원</span>
+                        <div class="product-seller"> <!--일반적으로 레이아웃을 나눌땐, div태그사용-->
+                            <img class="product-avatar" src="images/icons/avatar.png"/>
+                            <span>그랩</span>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="footer"></div>
+    </body>
+</html>
