@@ -5,7 +5,8 @@
 
   배열을 사용할때는 [] (대괄호인 Bracket을 사용한다)
   
-  배열의 길이를 알려면 >> 배열.length
+  배열의 길이를 알려면 >> 배열.length //numberp
+   값 반환
   배열 안에 값을 조회하려면 >> 배열[순서번호]
   배열에 새로운 값 추가 >> 배열.push(값)
 
@@ -13,3 +14,27 @@
   var productNames=['농구공','단백질 보충제'] //array 자료형 [] 정의
   var productIds=[10,20]; // 배열안에 모든 자료형을 넣을 수 있음
   var productNestArray=[[0,1,2],[3,4,5]] // 배열 안에 또 다른 배열도 가능함
+
+  배열에 새로운 값 추가 예시)
+  productNames[2]='노션 글'; // array의 3번째에 값을 넣음. 이 방식은 비선호
+  articleNames.push('노션 글'); // array의 마지막에 '노션 글' 값을 넣음
+
+ 객체(object) >>
+  객체는 자료들을 key, value 형태로 저장하는 자료형 이다.
+  중괄호 {} 안에 key와 value를 순차적으로 넣음
+  예)
+  //객체 형태
+  {
+    key1 : value1,
+    key2 : value2,
+  }
+  //객체 사용
+  var product={
+    "name": '농구공',
+    price : 50000
+    description: "그랩이 사용했던 농구공"
+  }
+  // 여기서 객체를 추가할려면 key : value 형식을 넣으면 된다 아래는 예시
+  product["seller"]="그랩"; // key는 "seller" value는 "그랩"
+  product.seller="수강생1"; // key는 "seller" value는 "수강생1"
+    
