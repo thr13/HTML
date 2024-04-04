@@ -1,0 +1,48 @@
+<Javascript 기본3>
+ 조건문>>
+  if(조건) { //조건이 true 이면 로직을 수행함, 만약 조건이 false, null, 0, "", undefined상태 이면 로직을 수행하지 않음
+    //로직
+  }
+  예)
+  var name="그랩";
+  var age=27;
+  if(name==="그랩"){
+    console.log("좋은 그랩") // 출력 "좋은 그랩"
+  }
+  if(name){
+    console.log("값") // 출력 "그랩"
+  }
+  var empty="";
+  if(empty){
+    console.log("수행될까?") // 로직이 수행되지 않음, empty는 빈 값이기 때문에 false와 비슷한 의미를 가짐
+  }
+
+  자바스크립트도 if, else if, else 지원함 >> if문이 false 이면 else if문 실행 >> else if문이 flase이면 else문 실행
+ 
+  조건문 연습문제 >> 
+  var products=[{
+    name:'농구공',
+    description:'농구 황제 마이클 조던이 사용한 공구공',
+    price:100000,
+  }, {
+    name:'축구공',
+    description:'축구 황제 메시가 사용한 공구공',
+    price:50000,
+  }]
+
+  //1. products의 갯수가 1개 이상일때와 아닐때를 나누는 조건문을 짜보세요
+    if(products.length>=1){
+        console.log('상품들을 보여주는 코드');
+    }
+    else{
+        console.log('상품 준비중 화면을 보여주는 코드');
+    }
+  //2. products의 갯수가 5개 이상일 때, 1~4개 사이일 때, 0개일때 조건문을 짜보세요
+    if(products.length>=5){
+        console.log('상품이 참 많네');
+    } else if(products.length>=1){
+        console.log('상품 1~4개 사이.');
+    } else {
+        console.log('상품 준비중');
+    }
+   
