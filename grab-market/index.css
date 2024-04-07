@@ -68,6 +68,7 @@
     margin-bottom: 12px;
     border: 1px solid rgb(230,230,230);
     border-radius: 12px; /*경계선 꼭지점의 둥근 정도를 나타냄*/
+    overflow:hidden; /*자식이 부모의 영역을 침범했을때 초과한 부분을 숨김처리*/
 }
 
 .product-img {
