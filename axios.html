@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> <!--외부 라이브러리(axios) 다운 >> axios객체 생성-->
+        <script>
+            axios.get('https://jsonplaceholder.typicode.com/todos/1').then(function(result){
+                console.log('통신 결과 : ', result.status);
+                console.log("data : ", result.data)
+            }).catch(function(error){
+                console.log('에러 발생 : ', error);
+            });
+            console.log('바로 실행');
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>
