@@ -1,0 +1,64 @@
+<Javascript 기본5>
+ <반복문>
+
+ //기본 반복문, 조건이 false가 될때까지 로직을 반복시킴
+ for(변수선언; 조건선언; 연산){
+    //로직
+ }
+
+ //반복문과 배열 접근 예시
+ var products=['농구공','축구공];
+ for(var i=0; i<products.length; i++){
+    var name=products[i] // 배열 products[]에 있는 1번째, 2번째 값을 가져와서 변수 name에 대입함
+    console.log(name);
+ }
+
+ //반복문 문제 예)
+ var products=[{
+    name:'농구공',
+    description:'농구 황제 마이클 조던이 사용한 농구공입니다',
+    price:100000,
+    seller:'민수'
+  },{
+    name:'축구공',
+    description:'축구 황제 메시가 사용한 축구공입니다',
+    seller:'철수'
+  }]
+  // products배열을 넣었을때, 그 안에 가격(price)를 순서대로 출력하는 함수를 만들어보세요
+  function productsPrice(array){
+    const len=array.length;
+    for(var i=0; i<len; i++){
+        console.log(array[i].price);
+    }
+  }
+
+ <javgscript 최종문제>
+ 
+ var allProducts = [{
+    name:'농구공',
+    description:'농구 황제 마이클 조던이 사용한 농구공입니다',
+    price:100000,
+  },{
+    name:'축구공',
+    description:'축구 황제 메시가 사용한 축구공입니다',
+    price:50000
+ },{
+    name:'야구공',
+    description:'박찬호가 던졌던 야구공입니다',
+    price:75000
+ }]
+
+ // 1. products 배열을 넣었을 때, 가격이 60000원 이상인 product 객체를 담은 배열을 반환하는 함수를 만들어라.
+
+ function getProducts(products){
+    var newProducts=[]; //값을 저장할 빈 배열 생성
+    for(var i=0; i<products.length; i++){
+        const newProduct=products[i]; //반복문이 실행될때마다 products 객체가 저장됨
+        const newPrice=newProduct.price; //객체가 저장된 product의 키 price를 또다른 변수에 대입
+        if(newPrice>=60000){
+            newProducts.push(newProduct); //배열에 값을 얻을때 .push(값 또는 객체) 키워드를 사용함 
+        }
+    } 
+    return newProducts; //마지막으로 들어간 배열을 return함
+ }
+
