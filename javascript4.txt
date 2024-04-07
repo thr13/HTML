@@ -44,15 +44,29 @@
     description:'축구 황제 메시가 사용한 축구공입니다',
     seller:'철수'
   }]
+
    1. 인자로 배열을 받았을 때 길이를 return하는 함수를 만드시오. 그리고 products를 넣어 실행해보세요.
-    
-    function products-length(products){
-        return products.length;
+    // 함수 선언식 방법
+    function getProductsLength(array){
+        return array.length;
     }
 
+    // 함수 표현식 방법
+    const getProductsLength = function(array){
+      return array.length
+    }
+
+p
    2. product 객체를 넣었었을 때, product의 seller를 반환하는 함수를 만들어 보세요. 그리고 products의 첫번째 값을 넣어 실행해보세요.
+    // 함수 선언식 방법
+    fucntion getProductsSeller(array){
+        return array.seller; //객체 안에 seller에 접근해서 반환
+    }
 
-    fucntion products-seller(products[seller]){
-        return products.seller;
+    // 함수 표현식 방법
+    const getProductsSeller=function(array){
+      return array.seller;
     }
     
+    // 출력방법 getProductsSeller(products[0]) 
+    // 결과로 "민수" 출력 , products[0]자리에 products[1]를 넣을시 "철수" 출력
