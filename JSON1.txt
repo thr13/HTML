@@ -1,0 +1,21 @@
+<JSON>
+ JavaScript Object Notation >> 데이터를 저장하거나 전송할 때 많이 사용되는 DATA형식
+ >> 네트워크 통신을 하면서 주고 받을 떄, 개발 과정에서 간단한 데이터를 저장할 때
+
+ JSON은 javascript 객체 표현식을 기본으로 가짐
+ >> 네트워크 통신을 통해 json데이터를 받아, javascript 객체로 쉽게 변환 >> javascript 객체를 json으로 쉽게 변환
+
+ <규칙>
+ key : value 형태로 데이터 표시, key는 항상 " " 쌍따옴표로 표현해야함 // javascript는 필요없지만 JSON은 필요함
+ value에는 문자열, 숫자, 배열, 객체 넣음
+ 값을 나열할 때 , 쉼표를 사용 그러나 마지막에는 , 쉼표를 넣지 않음
+ 예)
+{
+    "name" : "축구공",
+    "price" : 50000,
+    "likes" : ["그랩", "실키", "민수"],
+    "seller" : {
+        "name" : "그랩",
+        "email" : "grab@helloworld.com"
+    }
+}

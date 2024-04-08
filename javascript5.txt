@@ -1,0 +1,136 @@
+<ES6>
+IE브라우저에 Jscript언어 표준  >> ES(EcmaScript)  
+>> 각각 회사의 브라우저(또는 nods.djs, react)마다 javascript 해석방식이 다름 (크롬은 ES6를 지원함)
+
+ES6 javacript문법 >> 변수선언 let, const 비동기처리 Promis
+
+옛날 버전의 javascript로 변환시켜주는 작업 >> Babel이라는 Transpiling(트랜스파일링)을 사용한다
+
+<Template Literal : 템플릿 리터럴>
+ 일반적으로 string 자료형은 띄워쓰기와 + 연산자를 사용함 
+ >> 문자열 사용이 많을수록 + 연산자와 띄워쓰기 작업이 많아짐
+ >> Template Literal(템플릿 리터럴) 사용시 코드 가독성 상승
+ >> 데이터를 조합해 DOM에 적용하는 경우가 많은 경우 유용하게 사용됨
+
+ 예) 
+ const hello="안녕";
+ const introduce="나는 그랩이야!"
+ const age=5;
+ //기존방식
+ const text=hello+"! "+introduce+" 그리고 "+age+"살이야."
+
+ //Template Literal방식 
+ //` `(벡틱)을 사용하여 내부에 변수를 넣고, 이때 변수부분에 ${ }를 이용함
+ const newText=`${hello}! ${introduce} 그리고 ${age}살이야`
+
+<Desturcturing : 구조분해할당>
+ >> 객체와 배열에 들어있는 값을 가져올때 사용
+ 예)
+ const grab={
+    name : '그랩',
+    age : 27
+ };
+ const people=['민수','철수']
+
+ //기존방식은 . 연산자를 통해 객체 값에 접근 그리고 배열은 대괄호 [ ] 에 index를 넣어서 값을 대입함
+ var name=grab.name;
+ var age=grab.age;
+ var minsoo=people[0];
+ var chulsoo=people[1];
+
+ //Destructuring 방식에서 객체를 만들때 중괄호 { } 를 사용하면 객체의 Key를 바로 추출할 수 있다
+ var {name, age}=grab; //grab객체에 { }안의 Key를 알아서 뽑아줌
+ console.log(name); // "grab"이 바로 출력됨
+
+ const [minsoo, chulsoo] = people; // 배열도 [인자1, 인자2] = people배열 , 인자1에는 배열의 첫번째 항목인 민수, 인자2에는 배열의 두번째 항목인 철수가 들어간다
+
+<map, forEach 메소드>
+ 이들은 ES5 에서 나온 문법이다 >> map과 forEach 
+ >> 배열에서 기본으로 제공해주는 메소드 
+ >> 기존 for문 대신 map과 forEach로 배열을 순회할 수 있다
+
+ 콜백함수>> 첫 번째 인자는 배열에서 조회하는 값, 두번째인자는 순서(index)가 들어감
+ >> map, forEach 메소드는 배열을 조회한다 그러나 forEach는 별다른 return이 없고 map은 새로운 배열을 return함
+
+ 예)
+ var products=[{
+    name : '농구공',
+    price : 50000
+ }, {
+    name : '축구공'
+    price : 50000
+ }]
+
+ //콜백함수의 각 파라미터는 순회값과 몇번째인지 나타내는 순서 가 차례대로 들어감
+ //forEach 메소드
+ products.forEach(function(value, index) {
+	console.log((index+1)+'번째 호출'); // 인덱스 출력
+	console.log(value); // 객체 출력
+ })
+ //map 메소드
+ products.map(function(product, index){
+	console.log((index+1)+'번쨰 호출');
+	console.log(product);
+ });
+
+//forEach사용
+products.forEach(function(value, index) {
+	console.log(value.name); // 객체의 name 키의 값을 출력
+})
+
+//map사용(forEach와 다르게 return 사용가능)
+ const productNames=products.map(function(value, index) { //products.map에서 배열을 순회함
+	return value.name; //배열 값 반환
+ });
+
+//React에서는 다음과 같은 방식으로 데이터가 담긴 배열을 화면에 표시함
+ var productElements=products.map((product,index) => {
+    return (
+      <div>
+       <span>{product.name}</span> 
+	...
+      </div>
+    )
+ })
+
+//이 외에도 배열 메소드는 filter, reduce 등 배열 전용 메소드도 존재함
+
+<Lambda Function 람다 함수>
+ >> ES6에서 추가된 함수를 표현하는 새로운 방식 >> Lambda식 은 ( ) -> { } 형식을 사용함
+ >> 이를 arrow function 애로우 펑션 이라고 부름 >> 함수를 축약해서 표현하여 가독성이 좋고 return 구문을 생략할 수 있음
+
+ 예)
+ //기존방식인 함수 선언식과 함수 표현식
+ function getName(name){ //함수 선언식
+    return `${name} 입니다`    // Template Literal 방식 ` 벡틱을 사용하고 ${매개변수} 를 사용하여 매개변수 값을 대입함
+ }
+
+ const getName=function( ){ //함수 표현식~익명함수 사용
+    ...
+ }
+
+ //람다 함수 방식
+ const getName = ( ) => {  //이떄, 함수영역은 소괄호가 시작된 부분임 
+	...
+ }
+
+ //람다식의 장점으로 function키워드를 사용하지않아도 되고, return을 생략할수있음
+ const getName = (name) => `${name} 입니다`    //값이 바로 나옴
+
+ //주의: Lambda식은 기존함수랑 차이가 있고 this개념을 사용 할 떄와 다르게 동작함
+
+<conditional ternary operator : 3항 연산자>
+ >>3항 연산자는 if와 else를 단축한 모습이다
+
+ >> 3항 연산자의 형태
+ >> 조건식 ? 참일때 실행구문 : 거짓일때 실행구문
+ 예) 
+ const language='javascript';
+ language === 'javascript' ? console.log('재밌다') : console.log('재미없다')
+
+ //아래는 삼항연산자가 실행과 동시에 값을 반환함. 즉, isJavascript에는 true값이 들어간다
+ const isJavascript = language === 'javascript' ? true : false
+
+ //가시성을 위해 소괄호 ( )를 사용
+ const isJs = (language==='javascript' ? true : false );
+
